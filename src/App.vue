@@ -1,18 +1,18 @@
 <template>
-   <header id="continer">
-     <div id="left"></div>
-     <div id="right"></div>
-   </header>
+<div>
+  <out-header></out-header>
+</div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-
+import OutHeader from './components/OutHeader.vue'
 export default {
   name: 'App',
   components: {
     // HelloWorld
-  }
+    OutHeader
+}
 }
 </script>
 
