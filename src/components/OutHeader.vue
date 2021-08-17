@@ -33,12 +33,15 @@ export default {
 
 <style scoped>
 #header {
-  width: 100%;
+  width: 80%;
   height: 50px;
+  max-height: 50px;
   display: flex;
   background: #ffffff;
   position: relative;
   justify-content: space-between;
+  /* justify-items: auto; */
+  margin: 0 auto;
 }
 /* left */
 .logo {
@@ -61,7 +64,8 @@ export default {
 /* right */
 .right {
   display: flex;
-  padding-right: 10%;
+
+  /* padding-right: 10%; */
 }
 .text1,
 .text2 {
@@ -70,8 +74,11 @@ export default {
   font-weight: normal;
   text-align: center;
   padding-left: 30px;
+  /* padding-right: 30px; */
   position: relative;
-   display: flex;
+  display: flex;
+  /* justify-content: center; */
+  /* text-align: center; */
 }
 /* .right .text1 a {
   display: flex;
@@ -84,9 +91,35 @@ export default {
   /* background-position: -30px 0; */
   position: absolute;
   left: 0;
-  top: 5px;
+  top: -5px;
+}
+.text2 span {
+  padding-right: 30px; /* 给伪元素空间 */
+  position: relative;
+}
+.text2::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: url("../assets/images/ico_01.png");
+  transform: rotate(90deg);
+  position: absolute; /* 方便定位 */
+  right: 0;
+  top: -5px;
 }
 .text2 iframe {
+  width: 708px;
+  height: 582px;
+  position: absolute;
+  top: 30px;
+  right: 0;
   display: none;
 }
+.text2:hover iframe {
+  display: block;
+}
+.text2:hover iframe,#header .left span a{
+  z-index: 9;
+}
+
 </style>
