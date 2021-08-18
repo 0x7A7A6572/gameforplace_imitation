@@ -35,7 +35,7 @@ export default {
 #header {
   width: 80%;
   height: 50px;
-  max-height: 50px;
+  /* max-height: 50px; */
   display: flex;
   background: #ffffff;
   position: relative;
@@ -119,7 +119,7 @@ export default {
   display: block;
 }
 .text2:hover iframe,#header .left span a{
-  z-index: 9;
+  z-index: 13;
 }
 
 </style>

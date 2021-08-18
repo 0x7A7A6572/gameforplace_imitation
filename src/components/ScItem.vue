@@ -60,7 +60,7 @@
   top: 50%;
   left: 50%;
   margin: -30px 0 0 -30px;
-  animation: zoomPlay 2s infinite reverse;
+  animation: zoomPlay 1s linear infinite alternate;
 }
 /* .sc_item_vdio_play:hover {
     不是hover 而是持续动画

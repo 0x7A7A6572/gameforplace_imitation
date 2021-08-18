@@ -19,12 +19,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-section {
-  /* width: 100vw; 不设置宽度 */
-  height: 890px;
-  position: relative;
-  margin-top: -40px;
-}
-</style>

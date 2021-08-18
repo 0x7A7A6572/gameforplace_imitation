@@ -38,7 +38,7 @@ export default {
 </script>
 <style scoped>
 .gpnav {
-  padding: 5px;
+  /* padding: 5px; */
   /* width: 100vw;不设置宽度  */
   background: url("../assets/images/nav_bg.png") center no-repeat;
   position: relative;
@@ -52,6 +52,7 @@ export default {
   margin: 0 auto;
 }
 .gpnav .applogo {
+  margin: 5px;
   /* left: 200px; */
   /* margin-left: 200px; */
 }
@@ -74,7 +75,7 @@ export default {
   /* justify-content: center; */
   align-items: center;
   list-style: none;
-  /* margin: 0 auto; */
+  margin: 0 auto;
 }
 .nav-list li {
   width: 120px;
@@ -86,7 +87,7 @@ export default {
   background: url("../assets/images/navHover_bg.png") 0 -70px;
 }
 .nav-list li a {
-  line-height: 100px;
+  line-height: 80px; /**ul中a居中靠ta */
   color: white;
   text-align: center;
 }
