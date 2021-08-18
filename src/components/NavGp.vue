@@ -2,17 +2,20 @@
   <nav class="gpnav">
     <div>
       <a><img src="../assets/images/logo2.png" alt="" class="applogo" /></a>
-        <!-- h1包住两个text 下文block换行 -->
-        <h1>和平精英
-          <span>全球玩家的竞技冒险世界</span>
-        </h1>
+      <!-- h1包住两个text 下文block换行 -->
+      <h1>
+        和平精英
+        <span>全球玩家的竞技冒险世界</span>
+      </h1>
     </div>
 
     <ul class="nav-list">
       <li v-for="(item, i) in navList" :key="i">
-       <a href="">{{ item }}</a> 
+        <a href="">{{ item }}</a>
       </li>
     </ul>
+    <!-- 进入官网 -->
+    <button class="to-official"></button>
   </nav>
 </template>
 <script>
@@ -36,16 +39,17 @@ export default {
 <style scoped>
 .gpnav {
   padding: 5px;
-  width: 100vw;
+  /* width: 100vw;不设置宽度  */
   background: url("../assets/images/nav_bg.png") center no-repeat;
   position: relative;
   display: flex;
+  justify-content: space-between;
 }
-.gpnav div{
-  /* position: relative; */
-   display: flex;
-   
-   /* margin: 0 auto; */
+.gpnav div {
+  position: relative;
+  display: flex;
+
+  margin: 0 auto;
 }
 .gpnav .applogo {
   /* left: 200px; */
@@ -57,7 +61,7 @@ export default {
   white-space: normal;
   flex-shrink: 0;
 }
-.gpnav span{
+.gpnav span {
   font-size: 14px;
   color: white;
   font-weight: normal;
@@ -65,15 +69,34 @@ export default {
 }
 .nav-list {
   /* position: relative; */
+
   display: flex;
-  justify-content: center;
-  
+  /* justify-content: center; */
+  align-items: center;
   list-style: none;
   /* margin: 0 auto; */
 }
-.nav-list li{
-text-align: center;
-width: 120px;
+.nav-list li {
+  width: 120px;
+  height: 100px;
+  text-align: center;
+  /* align-items: center; */
+}
+.nav-list li:hover {
+  background: url("../assets/images/navHover_bg.png") 0 -70px;
+}
+.nav-list li a {
+  line-height: 100px;
+  color: white;
+  text-align: center;
+}
+.to-official {
+  width: 232px;
+  height: 78px;
+  position: absolute;
+  top:100%;
+  right: 10%;
+  background: url("../assets/images/join_btn.png");
 }
 </style>
 
